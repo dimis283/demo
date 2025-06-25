@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn-edit {
+    background-color: #d97706; /* Tailwind's yellow-600 */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+.btn-edit:hover {
+    background-color: #b45309; /* Tailwind's yellow-700 */
+}
+ .sortable-item {
+                transition: transform 0.15s ease, box-shadow 0.15s ease;
+            }
+            .sortable-ghost {
+                opacity: 0.7;
+                background: #f0f4f8 !important;
+                border: 1px dashed #90cdf4 !important;
+            }
+            .sortable-chosen {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+            .sortable-drag {
+                opacity: 0.8;
+            }
+            .drag-handle {
+                transition: color 0.2s ease;
+            }
+            .drag-handle:hover {
+                color: #4a5568;
+            }
+            
+             .sortable-item {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .sortable-ghost {
+            opacity: 0.7;
+            background: #f0f4f8 !important;
+            border: 1px dashed #90cdf4 !important;
+        }
+        .sortable-chosen {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .sortable-drag {
+            opacity: 0.8;
+        }
+        .drag-handle {
+            transition: color 0.2s ease;
+        }
+        .drag-handle:hover {
+            color: #4a5568;
+        }
+        .edit-btn {
+            background-color: #2563eb !important;
+            color: white !important;
+            border: 1px solid #2563eb !important;
+            min-width: 70px;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+        .edit-btn:hover {
+            background-color: #1d4ed8 !important;
+            border-color: #1d4ed8 !important;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+        }
+        .edit-btn {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+}
