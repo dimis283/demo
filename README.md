@@ -13,6 +13,8 @@ This backend application provides:
 
 - **SQLite Database**: Lightweight, file-based database storage
 - **Admin Interface**: User-friendly CMS dashboard
+- **Database Factories**: Automated test data generation
+- **Database Seeders**: Sample data population
 
 ## Database
 
@@ -22,18 +24,20 @@ This project uses **SQLite** as the database solution:
 - No additional database server required
 - Perfect for small to medium portfolio sites
 
-**Note**: The SQLite database is included in this repository with all necessary tables already created.
+**Note**: The models and controllers are included in this repository. You'll need to create the SQLite database and run migrations to set up the tables.
 
 ## Related Repository
 
-- **Frontend**: [Dopefolio Dynamic Site](https://github.com/yourusername/dopefolio-main) - The main website that consumes this CMS
+- **Frontend**: [Dopefolio Dynamic Site](https://github.com/dimis283/cms) - The main website that consumes this CMS
 
 ## Installation
 
+###  Creating the Database (Required)
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/demo.git
-   cd demo
+   git clone https://github.com/dimis283/cms.git
+   cd cms
    ```
 
 2. Install dependencies:
@@ -46,44 +50,38 @@ This project uses **SQLite** as the database solution:
    cp .env.example .env
    ```
 
-4. Configure environment (.env):
+4. Create SQLite database:
+   ```bash
+   touch database/database.sqlite
+   ```
+
+5. Configure environment (.env):
    ```
    DB_CONNECTION=sqlite
    DB_DATABASE=/absolute/path/to/your/project/database/database.sqlite
    ```
 
-5. Generate application key:
+6. Generate application key:
    ```bash
    php artisan key:generate
    ```
 
-6. Start the development server:
+7. Run migrations to create database tables:
+   ```bash
+   php artisan migrate
+   ```
+
+8.  Run seeders to populate with sample data:
+   ```bash
+   php artisan db:seed
+   ```
+
+9. Start the development server:
    ```bash
    php artisan serve
    ```
 
-## Usage
 
-### Admin Dashboard
-Access the CMS admin panel at: `http://localhost:8000/`
-
-## File Structure
-
-```
-demo/
-├── app/
-│   ├── Http/Controllers/
-│   ├── Models/
-│   └── ...
-├── database/
-│   ├── database.sqlite
-│   ├── migrations/
-│   └── seeders/
-├── routes/
-│   ├── api.php
-│   └── web.php
-└── ...
-```
 
 ## Technologies Used
 
@@ -92,10 +90,15 @@ demo/
 - **PHP** - Backend language
 - **Composer** - Dependency management
 - **Breeze** - Authentication scaffolding package
+- **Database Factories** - Model instance generation
+- **Database Seeders** - Sample data population
+
 
 ## Getting Started
 
-Since the SQLite database with all tables is already included in the repository, you can start using the CMS immediately after following the installation steps. The database is ready to use and contains the necessary table structure for managing your portfolio content.
+###  Setup Required
+Since the database is not included in the repository, you need to create it first using as mentioned in the installation section. The models and controllers are ready, and the migrations will create all necessary tables.
+
 
 ## License
 
