@@ -36,8 +36,8 @@ This project uses **SQLite** as the database solution:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/dimis283/cms.git
-   cd cms
+   git clone https://github.com/dimis283/demo.git
+   cd demo
    ```
 
 2. Install dependencies:
